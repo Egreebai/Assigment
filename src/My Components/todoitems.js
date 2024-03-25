@@ -2,7 +2,8 @@ import React from 'react'
 
 export const Todoitems = ({todo, onDelete}) => {
   return (
-    
+    <>
+
     <div className='text-center'>
                  <div className='todo'>
                   <div className='todos'>  
@@ -12,5 +13,6 @@ export const Todoitems = ({todo, onDelete}) => {
                     </div>
                 </div>
     </div>
+    </>
   )
 }

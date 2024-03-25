@@ -11,7 +11,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 
 function App() {
@@ -56,14 +55,18 @@ const addtodo = (title,desc)=>{
   },[todoarr])
 
   return (
+
     <Router>
+    
     <div className='App-header'></div>
       <Header title="Weather Display & Todo List"/>
+      
       <Switch>
         <Route exact path="/" render={()=>{
             return(
               <>
-              <div className='container-fluid mt-5'>
+              <div className='container-fluid mt-4'>
+              <h4 className='text-center color mb-5' style={{color:"#000"}}><b><u>Manage Your Task</u></b></h4>
                 <div className='row'>
                   <div className='col-md-6'><Addtodo addtodo={addtodo}/></div>
                   <div className='col-md-6 my-bg'><Todos todo = {todoarr} onDelete={onDelete}/></div>

@@ -19,10 +19,10 @@ export const Weather = () => {
   return (
     <>
     <div className='text-center weather_app'>
-      <h5 style={{color: "#1400ff", fontWeight: "bolder"}}>Check Wether Status</h5>
+      <h5 style={{color: "#fff"}}>Check Weather Status</h5>
       <div className='searchbar'>
         <input type='text' className='form-control' placeholder='Search..' onChange={(e)=> setSearch(e.target.value)}/>
-        <button className='btn btn-sm btn-warning' style={{fontWeight:'bold'}} onClick={searchPressed}>Search</button>
+        <button className='btn btn-sm btn-primary' style={{fontWeight:'bold'}} onClick={searchPressed}>Search</button>
       </div>
       {/* if whether is not undefined */}
       {typeof weather.main != "undefined" ? (
@@ -30,7 +30,7 @@ export const Weather = () => {
            <p>Location: <span style={{color:"#fff"}}>{weather.name}</span></p>
            <p>Temprature: <span style={{color:"#fff"}}>{weather.main.temp}°C</span></p>
            <p>Status: <span style={{color:"#fff"}}>{weather.weather[0].main}</span></p>
-           <p>DescriptioN: <span style={{color:"#fff"}}>{weather.weather[0].description}</span></p>
+           <p>Description: <span style={{color:"#fff"}}>{weather.weather[0].description}</span></p>
         </div>
       ) :(
         ""
